@@ -1,0 +1,435 @@
+@import 'reset.scss';
+@import 'global.scss';
+
+.main_page {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #352e2e;
+
+    @keyframes hover {
+        0% {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+
+        50% {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes hoverShadow {
+        0% {
+            height: 10px;
+        }
+
+        // 25% {
+        //     height: 5px;
+        // }
+
+        50% {
+            height: 5px;
+        }
+
+        100% {
+            height: 10px;
+        }
+    }
+
+    .page {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: #352e2e;
+        overflow-y: auto;
+        // box-shadow: 5px 5px 5px #131010;
+        // border:3px solid #2d2727;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE and Edge */
+        -ms-overflow-style: none;
+        // overflow-x: hidden;
+
+        @include screen-size(small) {
+            overflow-y: auto;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            min-height: 100%;
+            margin-bottom: 100px;
+        }
+
+        .scrollDown {
+            color: white;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 40px;
+            font-size: 20px;
+            opacity: 0;
+            animation: hover 0.8s infinite;
+            animation-delay: 3s;
+            h4 {
+                color: white;
+            }
+
+            * {
+                margin: 2px 0;
+            }
+        }
+
+        .fa-arrow-down {
+            
+        }
+        header {
+            position: absolute;
+            margin: auto;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: right;
+            z-index: 9999;
+
+            .juggle {
+                position: relative;
+            }
+
+            .title {
+                position: relative;
+            }
+
+            h1 {
+                // text-align: right;
+                font-weight: 900;
+                font-size: 8rem;
+                line-height: 6rem;
+                // border: 1px solid red;
+                color: white;
+                font-family: $lato;
+
+                @include screen-size(small) {
+                    font-size: 4rem;
+                    line-height: 4rem;
+                    text-align: center;
+                }
+
+                @include screen-size(kindaSmall) {
+                    font-size: 5rem;
+                    line-height: 4rem;
+                }
+
+                // @include screen-size(large) {
+                //     font-size: 7rem;
+                //     line-height: 7rem;
+                // }
+            }
+
+            h3 {
+                // font-size: 2rem;
+                margin-top: 10px;
+                color: white;
+
+                @include screen-size(small) {
+                    text-align: center;
+                }
+
+                @include screen-size(kindaSmall) {
+                    font-size: 5rem;
+                    line-height: 4rem;
+                }
+            }
+            .boston {
+                // font-size: 8rem;
+
+                @include screen-size(small) {
+                    // font-size: 6rem;
+                }
+            }
+        }
+
+        .cards {
+            // position: absolute;
+            // background-color: #fff;
+            // top: 0;
+            // left: 0;
+            // right: 0;
+            // bottom: 0;
+            // margin: auto;
+            // padding: 10px;
+
+            @include screen-size(small) {
+                position: relative;
+                display: block;
+            }
+
+            .card {
+                width: 80%;
+                align-items: center;
+                margin: 100px auto;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                transition: all 0.5s;
+
+                @include screen-size(small) {
+                    margin: 100px auto;
+                    display: block;
+                    width: 90%;
+                }
+
+                @include screen-size(kindaSmall) {
+                    margin: 100px auto;
+                    display: block;
+                }
+
+                @include screen-size(medium) {
+                    width: 90%;
+                }
+
+                &:hover {
+                    .photo {
+                    }
+                }
+
+                &:active {
+                    box-shadow: initial;
+                }
+
+                .photoContainer {
+                    text-align: center;
+
+                    @include screen-size(medium) {
+                        text-align: left;
+                    }
+
+                    @include screen-size(kindaSmall) {
+                        text-align: center;
+                    }
+
+                    .photo {
+                        width: 400px;
+                        height: 400px;
+                        background-repeat: no-repeat;
+                        background-position: top;
+                        background-size: cover;
+                        // border: 10px solid blue;
+                        box-shadow: 10px 10px 5px #1b1717;
+                        text-align: right;
+                        transition: all 0.5s;
+                        cursor: pointer;
+                        display: inline-block;
+
+                        @include screen-size(small) {
+                            margin: 25px auto;
+                            width: 100%;
+                        }
+
+                        @include screen-size(kindaSmall) {
+                            margin: 25px auto;
+                            width: 100%;
+                        }
+
+                        @include screen-size(medium) {
+                            width: 80%;
+                        }
+                    }
+                }
+
+                .greatInfo {
+                    height: 100%;
+                    text-align: left;
+
+                    @include screen-size(small) {
+                        width: 90%;
+                        height: auto;
+                        display: inline-block;
+                    }
+
+                    @include screen-size(kindaSmall) {
+                        width: 80%;
+                        height: auto;
+                        display: inline-block;
+                    }
+
+                    @include screen-size(medium) {
+                        // height: auto;
+                        display: inline-block;
+                    }
+
+                    * {
+                        margin: 10px 0;
+                    }
+                    h1 {
+                        font-size: 3rem;
+                        line-height: 3rem;
+                        color: white;
+                        text-align: left;
+                        width: 80%;
+
+                        @include screen-size(small) {
+                            width: 100%;
+                            font-size: 2rem;
+                        }
+
+                        @include screen-size(kindaSmall) {
+                            width: 100%;
+                            font-size: 2rem;
+                        }
+                    }
+
+                    h4 {
+                        color: #e6c93c;
+                        font-weight: 900;
+                        font-family: $lato;
+                    }
+
+                    .steamItems {
+                        height: 50px;
+                        width: 35%;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                        h4 {
+                            font-family: $grate;
+                            color: white;
+                            // display: inline-block;
+                            text-align: center;
+                            height: 33px;
+                            line-height: 33px;
+                            width: 33px;
+                            // margin: initial;
+                            // padding: initial;
+                            margin-right:5px;
+                        }
+
+                        .circle {
+                            // border-radius: 100px;
+                            background-color: #e63c3c;
+                            cursor: pointer;
+                            font-weight: 900;
+                            box-shadow: 5px 5px 5px #222;
+                            // padding: 10px;
+                            // line-height: 50px;
+                            // text-align: center;
+                        }
+                    }
+
+                    p {
+                        color: white;
+                        width: 80%;
+
+                        @include screen-size(small) {
+                            width: 100%;
+                        }
+
+                        @include screen-size(kindaSmall) {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            #card1 {
+                .photo {
+                    background-image: url('/BHMApp/assets/George_Carver.jpg');
+                }
+            }
+
+            #card2 {
+                .photo {
+                    background-image: url('/BHMApp/assets/Annie_Easley.jpg');
+                }
+            }
+
+            #card3 {
+                .photo {
+                    background-image: url('/BHMApp/assets/Jane_Wright.jpg');
+                }
+            }
+
+            #card4 {
+                .photo {
+                    background-image: url('/BHMApp/assets/Katherine_Johnson.jpg');
+                }
+            }
+
+            #card5 {
+                .photo {
+                    background-image: url('/BHMApp/assets/Lonnie_Johnson.jpg');
+                }
+            }
+
+            #card6 {
+                .photo {
+                    background-image: url('/BHMApp/assets/Mae_Jemison.jpg');
+                }
+            }
+
+            #card7 {
+                .photo {
+                    background-image: url('/BHMApp/assets/Mark_Dean.jpg');
+                }
+            }
+
+            #card8 {
+                .photo {
+                    background-image: url('/BHMApp/assets/Neil_deGrasse_Tyson.jpg');
+                }
+            }
+
+            #card9 {
+                .photo {
+                    background-image: url('/BHMApp/assets/Patricia_Bath.jpeg');
+                }
+            }
+
+            .openCard {
+                height: 40%;
+                width: 40%;
+                margin: auto !important;
+                background-color: #222;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                overflow-y: auto;
+
+                display: inline-block;
+                // padding: 50px 0;
+
+                .photo {
+                    // width: 100%;
+                    // height: 90%;
+                    position: relative;
+                    display: inline-block;
+                    // background-position: 0px -100px;
+                }
+            }
+        }
+
+        .placedCard {
+            .closedCard {
+                transition: all 0.2s;
+                &:hover {
+                    transition: all 0.5s;
+                    margin: 10px !important;
+                    box-shadow: initial;
+                }
+            }
+        }
+    }
+}

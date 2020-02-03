@@ -1,0 +1,714 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Lato:900");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Darker+Grotesque:400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=reset.css.map */
+/*FONTS*/
+/* COLOR PALLET */
+/* Social Colors */
+/* MEDIA QUERY BREAK POINTS */
+/*Main Font-sizes*/
+body {
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  color: white;
+}
+
+button {
+  font-family: "Quicksand", sans-serif;
+}
+
+.button-input {
+  transition: opacity 0.2s;
+}
+
+.disable {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.btn-post {
+  background-color: #222222;
+  color: white;
+  width: auto;
+  min-height: 10px;
+  margin-top: 10px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+
+.btn-large {
+  transition: all 0.2s;
+  width: inherit;
+  position: relative;
+  top: 0px;
+  width: 200px;
+  background-color: #222222 !important;
+}
+.btn-large:active {
+  position: relative;
+  top: 3px;
+}
+
+.input-field input:focus {
+  border-bottom: 1px solid #222222 !important;
+  box-shadow: 0 1px 0 0 #222222 !important;
+}
+.input-field .active {
+  color: #222222 !important;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+i {
+  height: initial !important;
+}
+
+label {
+  font-family: "Quicksand", sans-serif;
+  width: initial !important;
+}
+
+.lato {
+  font-family: "Lato", sans-serif;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+}
+
+.logo {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 9rem;
+  line-height: 9rem;
+  font-family: "Lato", sans-serif;
+}
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 5.625rem;
+    line-height: 5.625rem;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1257px) {
+  h1 {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+}
+
+h2 {
+  font-size: 5rem;
+  line-height: 10rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+@media only screen and (max-width: 700px) {
+  h2 {
+    font-size: 1rem;
+    line-height: 7.5rem;
+  }
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 30px;
+  font-family: "Quicksand", sans-serif;
+}
+@media only screen and (max-width: 700px) {
+  h3 {
+    font-size: 14.7058823529px;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1257px) {
+  h3 {
+    font-size: 16.6666666667px;
+  }
+}
+
+h4 {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 100;
+  font-family: "Quicksand", sans-serif;
+  color: #efefef;
+  color: #6f7780;
+}
+
+p {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 300;
+  font-family: "Quicksand", sans-serif;
+}
+@media only screen and (max-width: 700px) {
+  p {
+    font-size: 14px;
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #222222;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  font-family: "Quicksand", sans-serif !important;
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  top: -15px;
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #222222 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  top: -30px;
+}
+
+.display_none {
+  display: none !important;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.main_page {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #352e2e;
+}
+@keyframes hover {
+  0% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+@keyframes hoverShadow {
+  0% {
+    height: 10px;
+  }
+  50% {
+    height: 5px;
+  }
+  100% {
+    height: 10px;
+  }
+}
+.main_page .page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #352e2e;
+  overflow-y: auto;
+  /* Hide scrollbar for IE and Edge */
+  -ms-overflow-style: none;
+}
+.main_page .page::-webkit-scrollbar {
+  display: none;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .page {
+    overflow-y: auto;
+  }
+}
+.main_page .page section {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  margin-bottom: 100px;
+}
+.main_page .page .scrollDown {
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  font-size: 20px;
+  opacity: 0;
+  animation: hover 0.8s infinite;
+  animation-delay: 3s;
+}
+.main_page .page .scrollDown h4 {
+  color: white;
+}
+.main_page .page .scrollDown * {
+  margin: 2px 0;
+}
+.main_page .page header {
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: right;
+  z-index: 9999;
+}
+.main_page .page header .juggle {
+  position: relative;
+}
+.main_page .page header .title {
+  position: relative;
+}
+.main_page .page header h1 {
+  font-weight: 900;
+  font-size: 8rem;
+  line-height: 6rem;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .page header h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 837px) {
+  .main_page .page header h1 {
+    font-size: 5rem;
+    line-height: 4rem;
+  }
+}
+.main_page .page header h3 {
+  margin-top: 10px;
+  color: white;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .page header h3 {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 837px) {
+  .main_page .page header h3 {
+    font-size: 5rem;
+    line-height: 4rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .main_page .page .cards {
+    position: relative;
+    display: block;
+  }
+}
+.main_page .page .cards .card {
+  width: 80%;
+  align-items: center;
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  transition: all 0.5s;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .page .cards .card {
+    margin: 100px auto;
+    display: block;
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 837px) {
+  .main_page .page .cards .card {
+    margin: 100px auto;
+    display: block;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1257px) {
+  .main_page .page .cards .card {
+    width: 90%;
+  }
+}
+.main_page .page .cards .card:active {
+  box-shadow: initial;
+}
+.main_page .page .cards .card .photoContainer {
+  text-align: center;
+}
+@media only screen and (min-width: 701px) and (max-width: 1257px) {
+  .main_page .page .cards .card .photoContainer {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 837px) {
+  .main_page .page .cards .card .photoContainer {
+    text-align: center;
+  }
+}
+.main_page .page .cards .card .photoContainer .photo {
+  width: 400px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  box-shadow: 10px 10px 5px #1b1717;
+  text-align: right;
+  transition: all 0.5s;
+  cursor: pointer;
+  display: inline-block;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .page .cards .card .photoContainer .photo {
+    margin: 25px auto;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 837px) {
+  .main_page .page .cards .card .photoContainer .photo {
+    margin: 25px auto;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1257px) {
+  .main_page .page .cards .card .photoContainer .photo {
+    width: 80%;
+  }
+}
+.main_page .page .cards .card .greatInfo {
+  height: 100%;
+  text-align: left;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .page .cards .card .greatInfo {
+    width: 90%;
+    height: auto;
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 837px) {
+  .main_page .page .cards .card .greatInfo {
+    width: 80%;
+    height: auto;
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1257px) {
+  .main_page .page .cards .card .greatInfo {
+    display: inline-block;
+  }
+}
+.main_page .page .cards .card .greatInfo * {
+  margin: 10px 0;
+}
+.main_page .page .cards .card .greatInfo h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+  color: white;
+  text-align: left;
+  width: 80%;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .page .cards .card .greatInfo h1 {
+    width: 100%;
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 837px) {
+  .main_page .page .cards .card .greatInfo h1 {
+    width: 100%;
+    font-size: 2rem;
+  }
+}
+.main_page .page .cards .card .greatInfo h4 {
+  color: #e6c93c;
+  font-weight: 900;
+  font-family: "Lato", sans-serif;
+}
+.main_page .page .cards .card .greatInfo .steamItems {
+  height: 50px;
+  width: 35%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.main_page .page .cards .card .greatInfo .steamItems h4 {
+  font-family: "Darker Grotesque", sans-serif;
+  color: white;
+  text-align: center;
+  height: 33px;
+  line-height: 33px;
+  width: 33px;
+  margin-right: 5px;
+}
+.main_page .page .cards .card .greatInfo .steamItems .circle {
+  background-color: #e63c3c;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 5px 5px 5px #222;
+}
+.main_page .page .cards .card .greatInfo p {
+  color: white;
+  width: 80%;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .page .cards .card .greatInfo p {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 837px) {
+  .main_page .page .cards .card .greatInfo p {
+    width: 100%;
+  }
+}
+.main_page .page .cards #card1 .photo {
+  background-image: url("/BHMApp/assets/George_Carver.jpg");
+}
+.main_page .page .cards #card2 .photo {
+  background-image: url("/BHMApp/assets/Annie_Easley.jpg");
+}
+.main_page .page .cards #card3 .photo {
+  background-image: url("/BHMApp/assets/Jane_Wright.jpg");
+}
+.main_page .page .cards #card4 .photo {
+  background-image: url("/BHMApp/assets/Katherine_Johnson.jpg");
+}
+.main_page .page .cards #card5 .photo {
+  background-image: url("/BHMApp/assets/Lonnie_Johnson.jpg");
+}
+.main_page .page .cards #card6 .photo {
+  background-image: url("/BHMApp/assets/Mae_Jemison.jpg");
+}
+.main_page .page .cards #card7 .photo {
+  background-image: url("/BHMApp/assets/Mark_Dean.jpg");
+}
+.main_page .page .cards #card8 .photo {
+  background-image: url("/BHMApp/assets/Neil_deGrasse_Tyson.jpg");
+}
+.main_page .page .cards #card9 .photo {
+  background-image: url("/BHMApp/assets/Patricia_Bath.jpeg");
+}
+.main_page .page .cards .openCard {
+  height: 40%;
+  width: 40%;
+  margin: auto !important;
+  background-color: #222;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  overflow-y: auto;
+  display: inline-block;
+}
+.main_page .page .cards .openCard .photo {
+  position: relative;
+  display: inline-block;
+}
+.main_page .page .placedCard .closedCard {
+  transition: all 0.2s;
+}
+.main_page .page .placedCard .closedCard:hover {
+  transition: all 0.5s;
+  margin: 10px !important;
+  box-shadow: initial;
+}
+
+/*# sourceMappingURL=main.css.map */
