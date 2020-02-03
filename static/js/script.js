@@ -46,9 +46,9 @@ $('.card').click(function () {
     }
 })
 
-$(".page").scroll(function () {
-    $("span").text(x += 1);
-});
+// $(".page").scroll(function () {
+//     console
+// });
 
 function removeStyling(attr) {
     let element = document.getElementById(attr);

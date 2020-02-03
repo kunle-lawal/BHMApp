@@ -659,31 +659,31 @@ strong {
   }
 }
 .main_page .page .cards #card1 .photo {
-  background-image: url("/BHMApp/assets/George_Carver.jpg");
+  background-image: url("/assets/George_Carver.jpg");
 }
 .main_page .page .cards #card2 .photo {
-  background-image: url("/BHMApp/assets/Annie_Easley.jpg");
+  background-image: url("/assets/Annie_Easley.jpg");
 }
 .main_page .page .cards #card3 .photo {
-  background-image: url("/BHMApp/assets/Jane_Wright.jpg");
+  background-image: url("/assets/Jane_Wright.jpg");
 }
 .main_page .page .cards #card4 .photo {
-  background-image: url("/BHMApp/assets/Katherine_Johnson.jpg");
+  background-image: url("/assets/Katherine_Johnson.jpg");
 }
 .main_page .page .cards #card5 .photo {
-  background-image: url("/BHMApp/assets/Lonnie_Johnson.jpg");
+  background-image: url("/assets/Lonnie_Johnson.jpg");
 }
 .main_page .page .cards #card6 .photo {
-  background-image: url("/BHMApp/assets/Mae_Jemison.jpg");
+  background-image: url("/assets/Mae_Jemison.jpg");
 }
 .main_page .page .cards #card7 .photo {
-  background-image: url("/BHMApp/assets/Mark_Dean.jpg");
+  background-image: url("/assets/Mark_Dean.jpg");
 }
 .main_page .page .cards #card8 .photo {
-  background-image: url("/BHMApp/assets/Neil_deGrasse_Tyson.jpg");
+  background-image: url("/assets/Neil_deGrasse_Tyson.jpg");
 }
 .main_page .page .cards #card9 .photo {
-  background-image: url("/BHMApp/assets/Patricia_Bath.jpeg");
+  background-image: url("/assets/Patricia_Bath.jpeg");
 }
 .main_page .page .cards .openCard {
   height: 40%;
