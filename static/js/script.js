@@ -15,36 +15,13 @@ if(size == 'xlarge' || size == 'large') {
     playDesktopAnimation(function() {
         $('.cards').addClass('placedCard');
     });
+} else if(size == 'med' || 'sm' || 'xsm') {
+    playMobileAnimation(function () {
+        $('.cards').addClass('placedCard');
+    });
 }
 
 let cardAnimationFinished = true;
-$('.card').click(function () {
-    if (!openingAnimationPlayed || !cardAnimationFinished) {return}
-    let id = $(this).attr('id');
-    $(this).toggleClass('openCard');
-    $(this).toggleClass('closedCard');
-    if ($(this).hasClass('openCard')) {
-        // console.log(t2);
-        cardAnimationFinished = false;
-        anime({
-            targets: '#' + id,
-            easing: 'linear',
-            height: '100%',
-            width: '100%',
-            margin: 'auto',
-            duration: 150,
-            // delay: '100',
-            complete: function name(params) {
-                cardAnimationFinished = true;
-                console.log(cardAnimationFinished);
-                anime.remove('#'+id)
-            }
-        })
-    } else {
-        console.log('got here')
-        removeStyling(id);
-    }
-})
 
 $(".page").scroll(function () {
     // isScrolledIntoView('#card4')
@@ -140,8 +117,53 @@ function playDesktopAnimation(onComplete) {
     // }, '-=1300')
 }
 
-function playMobileAnimation() {
+function playMobileAnimation(onComplete) {
+    let tl = anime.timeline({
+        duration: 750,
+    })
+    tl.add({
+        targets: '.page',
+        easing: 'spring',
+        top: "25%",
+        bottom: "25%",
+        left: "0px",
+        right: "0px",
+        delay: 1000,
+    })
 
+    tl.add({
+        targets: 'h1',
+        easing: 'easeInOutBack',
+        opacity: [0, 1],
+        top: ['-100px', '-50px'],
+        delay: anime.stagger(200, { grid: [3, 3], from: 'center' }),
+    }, '-=2000')
+
+    tl.add({
+        targets: '.page',
+        easing: 'spring',
+        top: "0%",
+        bottom: "0%",
+        left: "0px",
+        right: "0px",
+        // delay: 1000,
+    })
+
+    tl.add({
+        targets: 'h1',
+        easing: 'easeInOutBack',
+        top: ['-50px', '0px'],
+        delay: anime.stagger(200, { grid: [3, 3], from: 'center' }),
+    }, '-=2000')
+
+    tl.add({
+        targets: '.title',
+        easing: 'linear',
+        opacity: [0, 1],
+        top: ['50px', '0px'],
+        duration: 550,
+        delay: anime.stagger(200, { grid: [3, 3], from: 'center' }),
+    }, '-=1000')
 }
 
 function isScrolledIntoView(elem) {

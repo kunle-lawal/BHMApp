@@ -9,6 +9,10 @@
     overflow: hidden;
     background-color: #3e3a3a;
 
+    @include screen-size(small) {
+        background-color: white;
+    }
+
     @keyframes hover {
         0% {
             transform: translateY(-10px);
@@ -123,13 +127,13 @@
                 font-family: $lato;
 
                 @include screen-size(small) {
-                    font-size: 4rem;
-                    line-height: 4rem;
+                    font-size: 3rem;
+                    line-height: 3rem;
                     text-align: center;
                 }
 
                 @include screen-size(kindaSmall) {
-                    font-size: 5rem;
+                    font-size: 4rem;
                     line-height: 4rem;
                 }
 

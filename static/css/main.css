@@ -378,6 +378,11 @@ strong {
   overflow: hidden;
   background-color: #3e3a3a;
 }
+@media only screen and (max-width: 700px) {
+  .main_page {
+    background-color: white;
+  }
+}
 @keyframes hover {
   0% {
     transform: translateY(-10px);
@@ -470,14 +475,14 @@ strong {
 }
 @media only screen and (max-width: 700px) {
   .main_page .page header h1 {
-    font-size: 4rem;
-    line-height: 4rem;
+    font-size: 3rem;
+    line-height: 3rem;
     text-align: center;
   }
 }
 @media only screen and (min-width: 701px) and (max-width: 837px) {
   .main_page .page header h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 4rem;
   }
 }
