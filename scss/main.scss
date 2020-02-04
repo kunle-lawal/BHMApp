@@ -7,7 +7,7 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    background-color: #352e2e;
+    background-color: #3e3a3a;
 
     @keyframes hover {
         0% {
@@ -51,7 +51,7 @@
         right: 0;
         bottom: 0;
         margin: auto;
-        background-color: #352e2e;
+        background-color: #2d2929;
         overflow-y: auto;
         // box-shadow: 5px 5px 5px #131010;
         // border:3px solid #2d2727;
@@ -117,7 +117,7 @@
                 // text-align: right;
                 font-weight: 900;
                 font-size: 8rem;
-                line-height: 6rem;
+                line-height: 8rem;
                 // border: 1px solid red;
                 color: white;
                 font-family: $lato;
@@ -179,11 +179,16 @@
 
             .card {
                 width: 80%;
+                // height: 100%;
                 align-items: center;
                 margin: 100px auto;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                transition: all 0.5s;
+                // transition: all 0.5s;
+
+                position: relative;
+                top: 100px;
+                opacity: 0;
 
                 @include screen-size(small) {
                     margin: 100px auto;
@@ -200,10 +205,10 @@
                     width: 90%;
                 }
 
-                &:hover {
-                    .photo {
-                    }
-                }
+                // &:hover {
+                //     .photo {
+                //     }
+                // }
 
                 &:active {
                     box-shadow: initial;
@@ -342,59 +347,59 @@
                 }
             }
 
-            #card1 {
-                .photo {
-                    background-image: url('/assets/George_Carver.jpg');
-                }
-            }
+            // #card1 {
+            //     .photo {
+            //         background-image: url('/BHMApp/assets/George_Carver.jpg');
+            //     }
+            // }
 
-            #card2 {
-                .photo {
-                    background-image: url('/assets/Annie_Easley.jpg');
-                }
-            }
+            // #card2 {
+            //     .photo {
+            //         background-image: url('/BHMApp/assets/Annie_Easley.jpg');
+            //     }
+            // }
 
-            #card3 {
-                .photo {
-                    background-image: url('/assets/Jane_Wright.jpg');
-                }
-            }
+            // #card3 {
+            //     .photo {
+            //         background-image: url('/BHMApp/assets/Jane_Wright.jpg');
+            //     }
+            // }
 
-            #card4 {
-                .photo {
-                    background-image: url('/assets/Katherine_Johnson.jpg');
-                }
-            }
+            // #card4 {
+            //     .photo {
+            //         background-image: url('/BHMApp/assets/Katherine_Johnson.jpg');
+            //     }
+            // }
 
-            #card5 {
-                .photo {
-                    background-image: url('/assets/Lonnie_Johnson.jpg');
-                }
-            }
+            // #card5 {
+            //     .photo {
+            //         background-image: url('/BHMApp/assets/Lonnie_Johnson.jpg');
+            //     }
+            // }
 
-            #card6 {
-                .photo {
-                    background-image: url('/assets/Mae_Jemison.jpg');
-                }
-            }
+            // #card6 {
+            //     .photo {
+            //         background-image: url('/BHMApp/assets/Mae_Jemison.jpg');
+            //     }
+            // }
 
-            #card7 {
-                .photo {
-                    background-image: url('/assets/Mark_Dean.jpg');
-                }
-            }
+            // #card7 {
+            //     .photo {
+            //         background-image: url('/BHMApp/assets/Mark_Dean.jpg');
+            //     }
+            // }
 
-            #card8 {
-                .photo {
-                    background-image: url('/assets/Neil_deGrasse_Tyson.jpg');
-                }
-            }
+            // #card8 {
+            //     .photo {
+            //         background-image: url('/BHMApp/assets/Neil_deGrasse_Tyson.jpg');
+            //     }
+            // }
 
-            #card9 {
-                .photo {
-                    background-image: url('/assets/Patricia_Bath.jpeg');
-                }
-            }
+            // #card9 {
+            //     .photo {
+            //         background-image: url('/BHMApp/assets/Patricia_Bath.jpeg');
+            //     }
+            // }
 
             .openCard {
                 height: 40%;
@@ -421,15 +426,15 @@
             }
         }
 
-        .placedCard {
-            .closedCard {
-                transition: all 0.2s;
-                &:hover {
-                    transition: all 0.5s;
-                    margin: 10px !important;
-                    box-shadow: initial;
-                }
-            }
-        }
+        // .placedCard {
+        //     .closedCard {
+        //         transition: all 0.2s;
+        //         &:hover {
+        //             transition: all 0.5s;
+        //             margin: 10px !important;
+        //             box-shadow: initial;
+        //         }
+        //     }
+        // }
     }
 }

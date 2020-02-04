@@ -376,7 +376,7 @@ strong {
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: #352e2e;
+  background-color: #3e3a3a;
 }
 @keyframes hover {
   0% {
@@ -410,7 +410,7 @@ strong {
   right: 0;
   bottom: 0;
   margin: auto;
-  background-color: #352e2e;
+  background-color: #2d2929;
   overflow-y: auto;
   /* Hide scrollbar for IE and Edge */
   -ms-overflow-style: none;
@@ -464,7 +464,7 @@ strong {
 .main_page .page header h1 {
   font-weight: 900;
   font-size: 8rem;
-  line-height: 6rem;
+  line-height: 8rem;
   color: white;
   font-family: "Lato", sans-serif;
 }
@@ -508,7 +508,9 @@ strong {
   margin: 100px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  transition: all 0.5s;
+  position: relative;
+  top: 100px;
+  opacity: 0;
 }
 @media only screen and (max-width: 700px) {
   .main_page .page .cards .card {
@@ -658,33 +660,6 @@ strong {
     width: 100%;
   }
 }
-.main_page .page .cards #card1 .photo {
-  background-image: url("/assets/George_Carver.jpg");
-}
-.main_page .page .cards #card2 .photo {
-  background-image: url("/assets/Annie_Easley.jpg");
-}
-.main_page .page .cards #card3 .photo {
-  background-image: url("/assets/Jane_Wright.jpg");
-}
-.main_page .page .cards #card4 .photo {
-  background-image: url("/assets/Katherine_Johnson.jpg");
-}
-.main_page .page .cards #card5 .photo {
-  background-image: url("/assets/Lonnie_Johnson.jpg");
-}
-.main_page .page .cards #card6 .photo {
-  background-image: url("/assets/Mae_Jemison.jpg");
-}
-.main_page .page .cards #card7 .photo {
-  background-image: url("/assets/Mark_Dean.jpg");
-}
-.main_page .page .cards #card8 .photo {
-  background-image: url("/assets/Neil_deGrasse_Tyson.jpg");
-}
-.main_page .page .cards #card9 .photo {
-  background-image: url("/assets/Patricia_Bath.jpeg");
-}
 .main_page .page .cards .openCard {
   height: 40%;
   width: 40%;
@@ -701,14 +676,6 @@ strong {
 .main_page .page .cards .openCard .photo {
   position: relative;
   display: inline-block;
-}
-.main_page .page .placedCard .closedCard {
-  transition: all 0.2s;
-}
-.main_page .page .placedCard .closedCard:hover {
-  transition: all 0.5s;
-  margin: 10px !important;
-  box-shadow: initial;
 }
 
 /*# sourceMappingURL=main.css.map */

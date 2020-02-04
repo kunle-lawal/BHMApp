@@ -46,12 +46,42 @@ $('.card').click(function () {
     }
 })
 
-// $(".page").scroll(function () {
-//     console
-// });
+$(".page").scroll(function () {
+    // isScrolledIntoView('#card4')
+    $('.card').each(function(i) {
+        // if($('.card').length >= i + 1) {return }
+        // console.log($('.card').length,  i + 1)
+        let id = $(this).attr('id');
+        if(isScrolledIntoView(this)) {
+            if ($(this).hasClass('closedCard') && id !== ('card' + ($('.card').length))) {
+                anime({
+                    targets: '#' + id,
+                    easing: 'easeInOutBack',
+                    opacity: 1,
+                    top: '0px',
+                    duration: 750,
+                    complete: function name(params) {
+                        // tl.pause();
+                        $('#' + id).removeClass('closedCard');
+                    }
+                })
+            } else {
+                anime({
+                    targets: '#' + id,
+                    easing: 'easeInOutBack',
+                    opacity: 1,
+                    duration: 750,
+                    complete: function name(params) {
+                        $('#' + id).removeClass('closedCard');
+                    }
+                })
+            }
+        }
+    })
+});
 
-function removeStyling(attr) {
-    let element = document.getElementById(attr);
+function removeStyling(id) {
+    let element = document.getElementById(id);
     element.removeAttribute('style');
 }
 
@@ -132,11 +162,12 @@ function playMobileAnimation() {
 }
 
 function isScrolledIntoView(elem) {
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
+    var docViewTop = $('.page').scrollTop();
+    var docViewBottom = $('.page').height();
 
     var elemTop = $(elem).offset().top;
     var elemBottom = elemTop + $(elem).height();
 
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    // console.log(`${elemBottom} <= ${docViewBottom}, ${elemTop} >= ${docViewTop} = ${((elemBottom <= docViewBottom) && (elemTop <= docViewTop))}`)
+    return ((elemBottom <= docViewBottom + 300) && (elemTop <= (docViewTop + 300)));
 }
