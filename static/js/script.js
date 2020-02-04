@@ -53,29 +53,12 @@ $(".page").scroll(function () {
         // console.log($('.card').length,  i + 1)
         let id = $(this).attr('id');
         if(isScrolledIntoView(this)) {
-            if ($(this).hasClass('closedCard') && id !== ('card' + ($('.card').length))) {
-                anime({
-                    targets: '#' + id,
-                    easing: 'easeInOutBack',
-                    opacity: 1,
-                    top: '0px',
-                    duration: 750,
-                    complete: function name(params) {
-                        // tl.pause();
-                        $('#' + id).removeClass('closedCard');
-                    }
-                })
-            } else {
-                anime({
-                    targets: '#' + id,
-                    easing: 'easeInOutBack',
-                    opacity: 1,
-                    duration: 750,
-                    complete: function name(params) {
-                        $('#' + id).removeClass('closedCard');
-                    }
-                })
-            }
+            $(this).addClass('slideInCard');
+            // if ($(this).hasClass('closedCard') && id !== ('card' + ($('.card').length))) {
+               
+            // } else {
+
+            // }
         }
     })
 });

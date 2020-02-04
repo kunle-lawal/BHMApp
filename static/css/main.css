@@ -660,6 +660,11 @@ strong {
     width: 100%;
   }
 }
+.main_page .page .cards .slideInCard {
+  top: 0;
+  opacity: 1;
+  transition: top 0.6s, opacity 0.6s;
+}
 .main_page .page .cards .openCard {
   height: 40%;
   width: 40%;
