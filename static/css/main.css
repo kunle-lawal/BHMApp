@@ -380,7 +380,7 @@ strong {
 }
 @media only screen and (max-width: 700px) {
   .main_page {
-    background-color: white;
+    background-color: #1b1818;
   }
 }
 @keyframes hover {
