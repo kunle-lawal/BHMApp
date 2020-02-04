@@ -135,7 +135,7 @@ function playMobileAnimation(onComplete) {
         targets: 'h1',
         easing: 'easeInOutBack',
         opacity: [0, 1],
-        top: ['-100px', '-50px'],
+        top: ['-100px', '-25px'],
         delay: anime.stagger(200, { grid: [3, 3], from: 'center' }),
     }, '-=2000')
 
@@ -152,7 +152,7 @@ function playMobileAnimation(onComplete) {
     tl.add({
         targets: 'h1',
         easing: 'easeInOutBack',
-        top: ['-50px', '0px'],
+        top: ['-25px', '25px'],
         delay: anime.stagger(200, { grid: [3, 3], from: 'center' }),
     }, '-=2000')
 
@@ -160,7 +160,7 @@ function playMobileAnimation(onComplete) {
         targets: '.title',
         easing: 'linear',
         opacity: [0, 1],
-        top: ['50px', '0px'],
+        top: ['100px', '25px'],
         duration: 550,
         delay: anime.stagger(200, { grid: [3, 3], from: 'center' }),
     }, '-=1000')
