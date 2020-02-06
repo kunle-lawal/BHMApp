@@ -10,7 +10,7 @@
     background-color: #3e3a3a;
 
     @include screen-size(small) {
-        background-color: #1b1818;
+        background-color: #efefef;
     }
 
     @keyframes hover {
@@ -49,6 +49,7 @@
     }
 
     .page {
+        z-index: 1;
         position: absolute;
         top: 0;
         left: 0;
@@ -449,5 +450,65 @@
         //         }
         //     }
         // }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 0;
+        opacity: 0;
+
+        @include screen-size(small) {
+            bottom: 20px;    
+        }
+
+        .social {
+            &_icons {
+                height: 7vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .icon {
+                    margin: 0 5px;
+                    color: #222;
+                    // border: 1px solid white;
+                    border-radius: 100px;
+                    padding: 10px;
+                    color: white;
+
+                    position: relative;
+                    transition: transform 0.5s;
+
+                    @include screen-size(small) {
+                        z-index: 999;
+                    }
+
+                    &:hover {
+                        transform: translateY(-5px);
+                    }
+                }
+
+                .fa-twitter {
+                    background-color: #00aced;
+                }
+
+                .fa-linkedin {
+                    background-color: #0e76a8;
+                }
+
+                .fa-github {
+                    background-color: #222;
+                }
+
+                .fa-envelope {
+                    background-color: #222;
+                    color: #fff;
+                }
+            }
+        }
     }
 }

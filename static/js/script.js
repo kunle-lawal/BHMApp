@@ -24,21 +24,27 @@ if(size == 'xlarge' || size == 'large') {
 let cardAnimationFinished = true;
 let hitBottom = false;
 $(".page").scroll(function () {
-    // var pageHeight = $('.page').height();
-    // var pageScrollHeight = $('.page')[0].scrollHeight;
-    // var scrollPosition =  $('.page').scrollTop();
+    var pageHeight = $('.page').height();
+    var pageScrollHeight = $('.page')[0].scrollHeight;
+    var scrollPosition =  $('.page').scrollTop();
     // console.log(`${Math.round(pageScrollHeight - pageHeight) - 10} <=  ${scrollPosition}`);
-    // console.log(`${Math.round(pageScrollHeight - pageHeight) - 10 <= scrollPosition}`);
-    // if (Math.round(pageScrollHeight - pageHeight) - 10 <= scrollPosition && !hitBottom) {
-    //     anime({
-    //         targets: '.page',
-    //         easing: 'spring',
-    //         duration: 450,
-    //         bottom: '50%',
-    //         delay: 1000
-    //     })
-    //     hitBottom = true;
-    // }
+    console.log(`${Math.round(pageScrollHeight - pageHeight) - 10 <= scrollPosition}`);
+    if (Math.round(pageScrollHeight - pageHeight) - 10 <= scrollPosition && !hitBottom) {
+        $('.page').css('transition', 'initial');
+        anime({
+            targets: '.page',
+            easing: 'easeInOutBack',
+            duration: 450,
+            bottom: (size == 'xlarge' || size == 'large') ? ['5%', '20%'] : '100px',
+            delay: 100
+        })
+        $('footer').css('opacity', '1');
+        hitBottom = true;
+    } else {
+        $('.page').css('transition', 'bottom 0.5s');
+        $('.page').css('bottom', (size == 'xlarge' || size == 'large') ? '5%' : '0px');
+        hitBottom = false;
+    }
     $('.card').each(function(i) {
         let id = $(this).attr('id');
         if(isScrolledIntoView(this)) {
