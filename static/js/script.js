@@ -15,7 +15,7 @@ if(size == 'xlarge' || size == 'large') {
     playDesktopAnimation(function() {
         $('.cards').addClass('placedCard');
     });
-} else if(size == 'med' || 'sm' || 'xsm') {
+} else if (size == 'sm' || size == 'xsm') {
     playMobileAnimation(function () {
         $('.cards').addClass('placedCard');
     });
@@ -181,5 +181,5 @@ function isScrolledIntoView(elem) {
     var elemBottom = elemTop + $(elem).height();
 
     // console.log(`${elemBottom} <= ${docViewBottom}, ${elemTop} >= ${docViewTop} = ${((elemBottom <= docViewBottom) && (elemTop <= docViewTop))}`)
-    return ((elemBottom <= docViewBottom + 300) && (elemTop <= (docViewTop + 300)));
+    return ((elemBottom <= docViewBottom + 800) && (elemTop <= (docViewTop + 800)));
 }
