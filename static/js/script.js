@@ -23,35 +23,58 @@ if(size == 'xlarge' || size == 'large') {
 
 let cardAnimationFinished = true;
 let hitBottom = false;
+let scrolling = true;
 $(".page").scroll(function () {
-    var pageHeight = $('.page').height();
-    var pageScrollHeight = $('.page')[0].scrollHeight;
-    var scrollPosition =  $('.page').scrollTop();
-    // console.log(`${Math.round(pageScrollHeight - pageHeight) - 10} <=  ${scrollPosition}`);
-    console.log(`${Math.round(pageScrollHeight - pageHeight) - 10 <= scrollPosition}`);
-    if (Math.round(pageScrollHeight - pageHeight) - 10 <= scrollPosition && !hitBottom) {
-        $('.page').css('transition', 'initial');
-        anime({
-            targets: '.page',
-            easing: 'easeInOutBack',
-            duration: 450,
-            bottom: (size == 'xlarge' || size == 'large') ? ['5%', '20%'] : '100px',
-            delay: 100
-        })
-        $('footer').css('opacity', '1');
-        hitBottom = true;
-    } else {
-        $('.page').css('transition', 'bottom 0.5s');
-        $('.page').css('bottom', (size == 'xlarge' || size == 'large') ? '5%' : '0px');
-        hitBottom = false;
-    }
+    let pageHeight = $('.page').height();
+    let pageScrollHeight = $('.page')[0].scrollHeight;
+    let scrollPosition = $('.page').scrollTop();
+    
+    // console.log(`${Math.round(pageScrollHeight - pageHeight) - 10 <= scrollPosition}`);
+    scrolling = true;
     $('.card').each(function(i) {
         let id = $(this).attr('id');
         if(isScrolledIntoView(this)) {
             $(this).addClass('slideInCard');
         }
     })
+
+    if (Math.round(pageScrollHeight - pageHeight) - 10 >= scrollPosition) {
+        $('.page').css('transition', 'bottom 0.5s');
+        $('.page').css('bottom', (size == 'xlarge' || size == 'large') ? '5%' : '0px');
+        hitBottom = false;
+    }
 });
+
+window.setInterval(function() {
+    let pageHeight = $('.page').height();
+    let pageScrollHeight = $('.page')[0].scrollHeight;
+    let scrollPosition = $('.page').scrollTop();
+    // console.log(`${Math.round(pageScrollHeight - pageHeight) - 10} <=  ${scrollPosition}`);
+    scrolling = false;
+    if (Math.round(pageScrollHeight - pageHeight) - 10 <= scrollPosition && !hitBottom) {
+        $('.page').css('transition', 'initial');
+        anime({
+            targets: '.page',
+            easing: 'easeInOutBack',
+            duration: 450,
+            bottom: (size == 'xlarge' || size == 'large') ? ['5%', '20%'] : '15vh',
+            delay: 100,
+            complete: function () {
+                $('footer').css('opacity', '1');
+                anime({
+                    targets: '#fa',
+                    easing: 'easeInOutBack',
+                    // marginTop: ['0px', '20px'],
+                    duration: 550,
+                    // delay: 1000,
+                    delay: anime.stagger(200, { from: 'center' }),
+                })
+            }
+        })
+
+        hitBottom = true;
+    }
+}, 1000)
 
 function removeStyling(id) {
     let element = document.getElementById(id);

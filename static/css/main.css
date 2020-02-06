@@ -378,11 +378,6 @@ strong {
   overflow: hidden;
   background-color: #3e3a3a;
 }
-@media only screen and (max-width: 700px) {
-  .main_page {
-    background-color: #efefef;
-  }
-}
 @keyframes hover {
   0% {
     transform: translateY(-10px);
@@ -698,7 +693,7 @@ strong {
 }
 .main_page footer {
   position: absolute;
-  bottom: 100px;
+  bottom: 50px;
   left: 0;
   right: 0;
   margin: auto;
@@ -710,6 +705,25 @@ strong {
     bottom: 20px;
   }
 }
+@media only screen and (min-width: 701px) and (max-width: 837px) {
+  .main_page footer {
+    bottom: 20px;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1257px) {
+  .main_page footer {
+    bottom: 0px;
+  }
+}
+.main_page footer h4 {
+  color: white;
+  text-transform: uppercase;
+  font-family: "Quicksand", sans-serif;
+}
+.main_page footer h4 span a {
+  font-weight: 900;
+  color: #ff2451;
+}
 .main_page footer .social_icons {
   height: 7vh;
   display: flex;
@@ -719,11 +733,12 @@ strong {
 .main_page footer .social_icons .icon {
   margin: 0 5px;
   color: #222;
-  border-radius: 100px;
   padding: 10px;
   color: white;
   position: relative;
   transition: transform 0.5s;
+  background-color: #524c4c;
+  box-shadow: 3px 3px 5px #333030;
 }
 @media only screen and (max-width: 700px) {
   .main_page footer .social_icons .icon {
@@ -732,19 +747,6 @@ strong {
 }
 .main_page footer .social_icons .icon:hover {
   transform: translateY(-5px);
-}
-.main_page footer .social_icons .fa-twitter {
-  background-color: #00aced;
-}
-.main_page footer .social_icons .fa-linkedin {
-  background-color: #0e76a8;
-}
-.main_page footer .social_icons .fa-github {
-  background-color: #222;
-}
-.main_page footer .social_icons .fa-envelope {
-  background-color: #222;
-  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

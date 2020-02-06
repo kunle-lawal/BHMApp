@@ -10,7 +10,7 @@
     background-color: #3e3a3a;
 
     @include screen-size(small) {
-        background-color: #efefef;
+        // background-color: #efefef;
     }
 
     @keyframes hover {
@@ -454,7 +454,7 @@
 
     footer {
         position: absolute;
-        bottom: 100px;
+        bottom: 50px;
         left: 0;
         right: 0;
         margin: auto;
@@ -462,7 +462,28 @@
         opacity: 0;
 
         @include screen-size(small) {
-            bottom: 20px;    
+            bottom: 20px;
+        }
+
+        @include screen-size(kindaSmall) {
+            bottom: 20px;
+        }
+
+        @include screen-size(medium) {
+            bottom: 0px;
+        }
+
+        h4 {
+            color: white;
+            text-transform: uppercase;
+            font-family: $quicksand;
+            
+            span {
+                a {
+                    font-weight: 900;
+                    color: #ff2451;
+                }
+            }
         }
 
         .social {
@@ -476,7 +497,7 @@
                     margin: 0 5px;
                     color: #222;
                     // border: 1px solid white;
-                    border-radius: 100px;
+                    // border-radius: 100px;
                     padding: 10px;
                     color: white;
 
@@ -490,23 +511,25 @@
                     &:hover {
                         transform: translateY(-5px);
                     }
+                    background-color: #524c4c;
+                    box-shadow: 3px 3px 5px #333030;
                 }
 
                 .fa-twitter {
-                    background-color: #00aced;
+                    // background-color: #00aced;
                 }
 
                 .fa-linkedin {
-                    background-color: #0e76a8;
+                    // background-color: #0e76a8;
                 }
 
                 .fa-github {
-                    background-color: #222;
+                    // background-color: #222;
                 }
 
                 .fa-envelope {
-                    background-color: #222;
-                    color: #fff;
+                    // background-color: #222;
+                    // color: #fff;
                 }
             }
         }
