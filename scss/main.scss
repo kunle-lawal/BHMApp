@@ -313,7 +313,7 @@
                         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
                         h4 {
                             font-family: $grate;
-                            color: white;
+                            color: #b3a4a4;
                             // display: inline-block;
                             text-align: center;
                             height: 33px;
@@ -322,11 +322,14 @@
                             // margin: initial;
                             // padding: initial;
                             margin-right:5px;
+                            @include noSelect();
                         }
 
                         .circle {
-                            // border-radius: 100px;
-                            background-color: #e63c3c;
+                            border-radius: 2px;
+                            background-color: #ddc23b;
+                            color: #000;
+                            text-decoration: underline;
                             cursor: pointer;
                             font-weight: 900;
                             box-shadow: 5px 5px 5px #222;

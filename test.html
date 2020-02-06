@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.0.0-alpha1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td style="color: #ff00ff; background-color:#FFFFFF">Q</TD>
+                <td style="background-color: #442244; color: #442244">Y</td>
+                <td style="color: #FFFF00; background-color:#442244">A</td>
+            </tr>
+            <tr>
+                <td style="color: #FFEEFE; background-color:#990000">Q</td>
+                <td style="color: #000000; background-color:#000001">M</td>
+                <td style="color: #000000; background-color:#FF7777">O</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        let visibleText = '';
+        $('table tr').each(function(i){
+            let color = $(this).children().each(function(i) {
+                let bgColor = $(this).css('background-color');
+                let color = $(this).css('color');
+                visibleText += (bgColor === color) ? '' : $(this).text();
+            })
+        });
+        console.log(visibleText);
+    </script>
+</body>
+</html>

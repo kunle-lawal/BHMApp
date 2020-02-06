@@ -22,20 +22,27 @@ if(size == 'xlarge' || size == 'large') {
 }
 
 let cardAnimationFinished = true;
-
+let hitBottom = false;
 $(".page").scroll(function () {
-    // isScrolledIntoView('#card4')
+    // var pageHeight = $('.page').height();
+    // var pageScrollHeight = $('.page')[0].scrollHeight;
+    // var scrollPosition =  $('.page').scrollTop();
+    // console.log(`${Math.round(pageScrollHeight - pageHeight) - 10} <=  ${scrollPosition}`);
+    // console.log(`${Math.round(pageScrollHeight - pageHeight) - 10 <= scrollPosition}`);
+    // if (Math.round(pageScrollHeight - pageHeight) - 10 <= scrollPosition && !hitBottom) {
+    //     anime({
+    //         targets: '.page',
+    //         easing: 'spring',
+    //         duration: 450,
+    //         bottom: '50%',
+    //         delay: 1000
+    //     })
+    //     hitBottom = true;
+    // }
     $('.card').each(function(i) {
-        // if($('.card').length >= i + 1) {return }
-        // console.log($('.card').length,  i + 1)
         let id = $(this).attr('id');
         if(isScrolledIntoView(this)) {
             $(this).addClass('slideInCard');
-            // if ($(this).hasClass('closedCard') && id !== ('card' + ($('.card').length))) {
-               
-            // } else {
-
-            // }
         }
     })
 });

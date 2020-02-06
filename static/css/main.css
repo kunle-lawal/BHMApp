@@ -638,15 +638,29 @@ strong {
 }
 .main_page .page .cards .card .greatInfo .steamItems h4 {
   font-family: "Darker Grotesque", sans-serif;
-  color: white;
+  color: #b3a4a4;
   text-align: center;
   height: 33px;
   line-height: 33px;
   width: 33px;
   margin-right: 5px;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
 }
 .main_page .page .cards .card .greatInfo .steamItems .circle {
-  background-color: #e63c3c;
+  border-radius: 2px;
+  background-color: #ddc23b;
+  color: #000;
+  text-decoration: underline;
   cursor: pointer;
   font-weight: 900;
   box-shadow: 5px 5px 5px #222;
