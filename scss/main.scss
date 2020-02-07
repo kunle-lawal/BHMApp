@@ -457,21 +457,11 @@
         bottom: 50px;
         left: 0;
         right: 0;
+        bottom: 0;
         margin: auto;
         z-index: 0;
         opacity: 0;
-
-        @include screen-size(small) {
-            bottom: 20px;
-        }
-
-        @include screen-size(kindaSmall) {
-            bottom: 20px;
-        }
-
-        @include screen-size(medium) {
-            bottom: 0px;
-        }
+        padding: 20px 0;
 
         h4 {
             color: white;
@@ -480,8 +470,9 @@
             
             span {
                 a {
+                    text-transform: initial;
                     font-weight: 900;
-                    color: #ff2451;
+                    color: #ff4a4a;
                 }
             }
         }

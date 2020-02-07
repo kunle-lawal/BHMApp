@@ -48,6 +48,7 @@ $h1-font: 9rem;
 $h2-font: 5rem;
 $h3-font: 25px;
 $h4-font: 15px;
+$h5-font: 10px;
 $p-font: 18px;
 
 body {
@@ -309,6 +310,15 @@ h4 {
     font-family: 'Quicksand', sans-serif;
     color: #efefef;
     color: hsl(214, 7%, 47%);
+}
+
+h5 {
+    font-size: $h5-font;
+    line-height: $h5-font+5;
+    font-weight: 100;
+    font-family: 'Quicksand', sans-serif;
+    color: #bfbfbf;
+    // color: hsl(214, 7%, 47%);
 }
 
 p {

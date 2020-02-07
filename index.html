@@ -36,6 +36,7 @@
              <div class="social">
                  <div class="social_icons" class="">
                     <a href="https://www.facebook.com/steambostondotcom/" class="fab fa-facebook icon" id="fa" target="_blank"></a>
+                    <a href="https://twitter.com/steamboston" class="fab fa-twitter icon" id="fa" target="_blank"></a>
                     <a href="https://www.instagram.com/steamboston/?hl=en" class="fab fa-instagram icon" id="fa"
                         target="_blank"></a>
                     <a href="https://www.linkedin.com/company/steam-boston" id="fa" class="fab fa-linkedin icon" target="_blank"></a>
@@ -43,12 +44,17 @@
                         target="_blank"></a>
                     <a href="https://open.spotify.com/show/2vYmDWGpbZwhIixcNzboh9" class="fab fa-spotify icon" id="fa"
                         target="_blank"></a>
-                    <a href="https://twitter.com/steamboston" class="fab fa-twitter icon" id="fa" target="_blank"></a>
                      <!-- <a href="" class="fas fa-envelope icon" id="fa"></a> -->
                  </div>
              </div>
+             <h5>STEAM Boston LLC , <span id='footerYear'></span></h5>
         </footer>
     </div>
+
+    <script>
+        var dt = new Date();
+        document.getElementById('footerYear').innerHTML = dt.getFullYear();
+    </script>
     <script src="static/js/renderDom.js"></script>
     <script src="static/js/anime.min.js"></script>
     <script src="static/js/script.js"></script>

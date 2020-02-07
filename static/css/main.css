@@ -303,6 +303,14 @@ h4 {
   color: #6f7780;
 }
 
+h5 {
+  font-size: 10px;
+  line-height: 15px;
+  font-weight: 100;
+  font-family: "Quicksand", sans-serif;
+  color: #bfbfbf;
+}
+
 p {
   font-size: 18px;
   line-height: 23px;
@@ -696,24 +704,11 @@ strong {
   bottom: 50px;
   left: 0;
   right: 0;
+  bottom: 0;
   margin: auto;
   z-index: 0;
   opacity: 0;
-}
-@media only screen and (max-width: 700px) {
-  .main_page footer {
-    bottom: 20px;
-  }
-}
-@media only screen and (min-width: 701px) and (max-width: 837px) {
-  .main_page footer {
-    bottom: 20px;
-  }
-}
-@media only screen and (min-width: 701px) and (max-width: 1257px) {
-  .main_page footer {
-    bottom: 0px;
-  }
+  padding: 20px 0;
 }
 .main_page footer h4 {
   color: white;
@@ -721,8 +716,9 @@ strong {
   font-family: "Quicksand", sans-serif;
 }
 .main_page footer h4 span a {
+  text-transform: initial;
   font-weight: 900;
-  color: #ff2451;
+  color: #ff4a4a;
 }
 .main_page footer .social_icons {
   height: 7vh;
